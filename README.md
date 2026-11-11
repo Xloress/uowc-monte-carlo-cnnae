@@ -112,8 +112,8 @@ Seluruh grafik keluaran akan tersimpan otomatis di direktori `figs/`.
 
 ## 📊 Pemetaan Gambar Hasil Riset
 
-| Gambar | Keterangan Parameter Teknis | Bab Terkait |
-|:---|:---|:---:|
+| Gambar | Keterangan Parameter Teknis |
+|:---|:---|
 | `fig1_redaman_vs_jarak.png` | Karakteristik rugi kanal terhadap jarak pada 4 tipe perairan |
 | `fig5_linkbudget_3model.png` | Perbandingan model analitis Beer-Lambert vs Monte Carlo |
 | `fig2_impulse_response.png` | Respon impuls kanal optik pada jarak transmisi $20\text{ m}$ |
