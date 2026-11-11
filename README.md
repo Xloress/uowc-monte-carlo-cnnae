@@ -111,15 +111,15 @@ Seluruh grafik keluaran akan tersimpan otomatis di direktori `figs/`.
 
 | Gambar | Keterangan Parameter Teknis | Bab Terkait |
 |:---|:---|:---:|
-| `fig1_redaman_vs_jarak.png` | Karakteristik rugi kanal terhadap jarak pada 4 tipe perairan | Bab IV.A |
-| `fig5_linkbudget_3model.png` | Perbandingan model analitis Beer-Lambert vs Monte Carlo | Bab IV.A |
-| `fig2_impulse_response.png` | Respon impuls kanal optik pada jarak transmisi $20\text{ m}$ | Bab IV.B |
-| `fig3_aperture.png` | Pengaruh diameter aperture penerima terhadap penerimaan foton | Bab IV.B |
-| `fig4_dispersi.png` | Karakteristik pelebaran waktu sinyal (*RMS delay spread*) | Bab IV.B |
-| `fig6_ber_vs_snr.png` | Kurva kinerja BER vs $E_b/N_0$ pada berbagai kondisi turbulensi | Bab IV.C |
-| `fig7_ber_vs_turbulensi.png`| Evaluasi performa model CNN-AE terhadap variasi indeks sintilasi | Bab IV.C |
-| `fig8_failover_timeline.png`| Dinamika waktu transisi (*convergence*) failover rute OSPF | Bab IV.D |
-| `fig9_throughput_latensi.png`| Karakteristik throughput dan latensi sistem hibrida terpadu | Bab IV.D |
+| `fig1_redaman_vs_jarak.png` | Karakteristik rugi kanal terhadap jarak pada 4 tipe perairan |
+| `fig5_linkbudget_3model.png` | Perbandingan model analitis Beer-Lambert vs Monte Carlo |
+| `fig2_impulse_response.png` | Respon impuls kanal optik pada jarak transmisi $20\text{ m}$ |
+| `fig3_aperture.png` | Pengaruh diameter aperture penerima terhadap penerimaan foton |
+| `fig4_dispersi.png` | Karakteristik pelebaran waktu sinyal (*RMS delay spread*) |
+| `fig6_ber_vs_snr.png` | Kurva kinerja BER vs $E_b/N_0$ pada berbagai kondisi turbulensi |
+| `fig7_ber_vs_turbulensi.png`| Evaluasi performa model CNN-AE terhadap variasi indeks sintilasi |
+| `fig8_failover_timeline.png`| Dinamika waktu transisi (*convergence*) failover rute OSPF |
+| `fig9_throughput_latensi.png`| Karakteristik throughput dan latensi sistem hibrida terpadu |
 
 ---
 
