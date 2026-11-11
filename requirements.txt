@@ -1,0 +1,14 @@
+# Kebutuhan paket simulasi UOWC (Python 3.10+)
+# Pasang dengan:  pip install -r requirements.txt
+#
+# CPU-only PyTorch (ukuran unduhan jauh lebih kecil dari versi CUDA):
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+# lalu pasang sisa berkas ini.
+
+torch>=2.0
+numpy>=1.24
+matplotlib>=3.7
+scipy>=1.10
+python-docx>=1.1
+python-pptx>=0.6.23
+pillow>=9.0

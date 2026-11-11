@@ -1,0 +1,53 @@
+water,distance_m,optical_up,path,throughput_kbps,latency_ms,ospf_cost
+Clear ocean,5,True,optik,1000000.000,0.0000,1
+Clear ocean,5,False,akustik,15.000,3.3333,100
+Clear ocean,10,True,optik,1000000.000,0.0000,1
+Clear ocean,10,False,akustik,15.000,6.6667,100
+Clear ocean,20,True,optik,1000000.000,0.0001,1
+Clear ocean,20,False,akustik,15.000,13.3333,100
+Clear ocean,30,True,optik,1000000.000,0.0001,1
+Clear ocean,30,False,akustik,15.000,20.0000,100
+Clear ocean,40,True,optik,1000000.000,0.0002,1
+Clear ocean,40,False,akustik,15.000,26.6667,100
+Clear ocean,50,True,optik,1000000.000,0.0002,1
+Clear ocean,50,False,akustik,15.000,33.3333,100
+Clear ocean,60,True,akustik,15.000,40.0000,100
+Clear ocean,60,False,akustik,15.000,40.0000,100
+Clear ocean,80,True,akustik,15.000,53.3333,100
+Clear ocean,80,False,akustik,15.000,53.3333,100
+Clear ocean,100,True,akustik,15.000,66.6667,100
+Clear ocean,100,False,akustik,15.000,66.6667,100
+Clear ocean,200,True,akustik,15.000,133.3333,100
+Clear ocean,200,False,akustik,15.000,133.3333,100
+Clear ocean,500,True,akustik,15.000,333.3333,100
+Clear ocean,500,False,akustik,15.000,333.3333,100
+Clear ocean,1000,True,akustik,2.400,666.6667,100
+Clear ocean,1000,False,akustik,2.400,666.6667,100
+Clear ocean,2000,True,akustik,2.400,1333.3333,100
+Clear ocean,2000,False,akustik,2.400,1333.3333,100
+Coastal,5,True,optik,1000000.000,0.0000,1
+Coastal,5,False,akustik,15.000,3.3333,100
+Coastal,10,True,optik,1000000.000,0.0000,1
+Coastal,10,False,akustik,15.000,6.6667,100
+Coastal,20,True,optik,1000000.000,0.0001,1
+Coastal,20,False,akustik,15.000,13.3333,100
+Coastal,30,True,optik,1000000.000,0.0001,1
+Coastal,30,False,akustik,15.000,20.0000,100
+Coastal,40,True,akustik,15.000,26.6667,100
+Coastal,40,False,akustik,15.000,26.6667,100
+Coastal,50,True,akustik,15.000,33.3333,100
+Coastal,50,False,akustik,15.000,33.3333,100
+Coastal,60,True,akustik,15.000,40.0000,100
+Coastal,60,False,akustik,15.000,40.0000,100
+Coastal,80,True,akustik,15.000,53.3333,100
+Coastal,80,False,akustik,15.000,53.3333,100
+Coastal,100,True,akustik,15.000,66.6667,100
+Coastal,100,False,akustik,15.000,66.6667,100
+Coastal,200,True,akustik,15.000,133.3333,100
+Coastal,200,False,akustik,15.000,133.3333,100
+Coastal,500,True,akustik,15.000,333.3333,100
+Coastal,500,False,akustik,15.000,333.3333,100
+Coastal,1000,True,akustik,2.400,666.6667,100
+Coastal,1000,False,akustik,2.400,666.6667,100
+Coastal,2000,True,akustik,2.400,1333.3333,100
+Coastal,2000,False,akustik,2.400,1333.3333,100

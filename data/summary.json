@@ -1,0 +1,456 @@
+{
+  "fig1": [
+    {
+      "water": "Pure sea",
+      "Z_m": 5,
+      "n_photons": 300000,
+      "loss_db": -4.867676695781641,
+      "n_received": 106032,
+      "bl_db": -1.216024549329105
+    },
+    {
+      "water": "Pure sea",
+      "Z_m": 10,
+      "n_photons": 300000,
+      "loss_db": -12.06342013843046,
+      "n_received": 22144,
+      "bl_db": -2.43204909865821
+    },
+    {
+      "water": "Pure sea",
+      "Z_m": 20,
+      "n_photons": 300000,
+      "loss_db": -20.4680151933105,
+      "n_received": 3837,
+      "bl_db": -4.86409819731642
+    },
+    {
+      "water": "Pure sea",
+      "Z_m": 30,
+      "n_photons": 300000,
+      "loss_db": -26.20043270932174,
+      "n_received": 1214,
+      "bl_db": -7.29614729597463
+    },
+    {
+      "water": "Pure sea",
+      "Z_m": 40,
+      "n_photons": 300000,
+      "loss_db": -31.130947236139868,
+      "n_received": 478,
+      "bl_db": -9.72819639463284
+    },
+    {
+      "water": "Pure sea",
+      "Z_m": 50,
+      "n_photons": 300000,
+      "loss_db": -35.20925349188116,
+      "n_received": 226,
+      "bl_db": -12.160245493291052
+    },
+    {
+      "water": "Pure sea",
+      "Z_m": 60,
+      "n_photons": 300000,
+      "loss_db": -38.560158230739475,
+      "n_received": 111,
+      "bl_db": -14.59229459194926
+    },
+    {
+      "water": "Pure sea",
+      "Z_m": 80,
+      "n_photons": 600000,
+      "loss_db": -46.052657805457144,
+      "n_received": 53,
+      "bl_db": -19.45639278926568
+    },
+    {
+      "water": "Pure sea",
+      "Z_m": 100,
+      "n_photons": 600000,
+      "loss_db": -49.26065544940548,
+      "n_received": 20,
+      "bl_db": -24.320490986582104
+    },
+    {
+      "water": "Clear ocean",
+      "Z_m": 5,
+      "n_photons": 300000,
+      "loss_db": -6.393302850928323,
+      "n_received": 76792,
+      "bl_db": -3.2572086142743886
+    },
+    {
+      "water": "Clear ocean",
+      "Z_m": 10,
+      "n_photons": 300000,
+      "loss_db": -15.091440070571219,
+      "n_received": 11768,
+      "bl_db": -6.514417228548777
+    },
+    {
+      "water": "Clear ocean",
+      "Z_m": 20,
+      "n_photons": 300000,
+      "loss_db": -26.461120649676072,
+      "n_received": 1113,
+      "bl_db": -13.028834457097554
+    },
+    {
+      "water": "Clear ocean",
+      "Z_m": 30,
+      "n_photons": 300000,
+      "loss_db": -34.819398652231556,
+      "n_received": 221,
+      "bl_db": -19.54325168564633
+    },
+    {
+      "water": "Clear ocean",
+      "Z_m": 40,
+      "n_photons": 300000,
+      "loss_db": -43.091210259293035,
+      "n_received": 53,
+      "bl_db": -26.05766891419511
+    },
+    {
+      "water": "Clear ocean",
+      "Z_m": 50,
+      "n_photons": 300000,
+      "loss_db": -49.0006429180344,
+      "n_received": 21,
+      "bl_db": -32.572086142743885
+    },
+    {
+      "water": "Clear ocean",
+      "Z_m": 60,
+      "n_photons": 300000,
+      "loss_db": -54.81903241653108,
+      "n_received": 9,
+      "bl_db": -39.08650337129266
+    },
+    {
+      "water": "Clear ocean",
+      "Z_m": 80,
+      "n_photons": 600000,
+      "loss_db": -64.77104273332873,
+      "n_received": 7,
+      "bl_db": -52.11533782839022
+    },
+    {
+      "water": "Clear ocean",
+      "Z_m": 100,
+      "n_photons": 600000,
+      "loss_db": -300.0,
+      "n_received": 0,
+      "bl_db": -65.14417228548777
+    },
+    {
+      "water": "Coastal",
+      "Z_m": 5,
+      "n_photons": 300000,
+      "loss_db": -8.843571853411209,
+      "n_received": 45298,
+      "bl_db": -6.62299084902459
+    },
+    {
+      "water": "Coastal",
+      "Z_m": 10,
+      "n_photons": 300000,
+      "loss_db": -19.72861944592504,
+      "n_received": 4464,
+      "bl_db": -13.24598169804918
+    },
+    {
+      "water": "Coastal",
+      "Z_m": 20,
+      "n_photons": 300000,
+      "loss_db": -35.213814477884476,
+      "n_received": 217,
+      "bl_db": -26.49196339609836
+    },
+    {
+      "water": "Coastal",
+      "Z_m": 30,
+      "n_photons": 300000,
+      "loss_db": -47.03013045987004,
+      "n_received": 30,
+      "bl_db": -39.73794509414754
+    },
+    {
+      "water": "Coastal",
+      "Z_m": 40,
+      "n_photons": 300000,
+      "loss_db": -59.993629612677886,
+      "n_received": 5,
+      "bl_db": -52.98392679219672
+    },
+    {
+      "water": "Coastal",
+      "Z_m": 50,
+      "n_photons": 300000,
+      "loss_db": -77.37714323467978,
+      "n_received": 3,
+      "bl_db": -66.2299084902459
+    },
+    {
+      "water": "Coastal",
+      "Z_m": 60,
+      "n_photons": 300000,
+      "loss_db": -300.0,
+      "n_received": 0,
+      "bl_db": -79.47589018829508
+    },
+    {
+      "water": "Coastal",
+      "Z_m": 80,
+      "n_photons": 600000,
+      "loss_db": -87.3495336034877,
+      "n_received": 1,
+      "bl_db": -105.96785358439344
+    },
+    {
+      "water": "Coastal",
+      "Z_m": 100,
+      "n_photons": 600000,
+      "loss_db": -300.0,
+      "n_received": 0,
+      "bl_db": -132.4598169804918
+    },
+    {
+      "water": "Harbor",
+      "Z_m": 5,
+      "n_photons": 300000,
+      "loss_db": -31.195481787551735,
+      "n_received": 699,
+      "bl_db": -47.120951286502816
+    },
+    {
+      "water": "Harbor",
+      "Z_m": 10,
+      "n_photons": 300000,
+      "loss_db": -50.08369603895187,
+      "n_received": 55,
+      "bl_db": -94.24190257300563
+    },
+    {
+      "water": "Harbor",
+      "Z_m": 20,
+      "n_photons": 300000,
+      "loss_db": -89.01853696537641,
+      "n_received": 2,
+      "bl_db": -188.48380514601126
+    }
+  ],
+  "fig5": [
+    {
+      "water": "Pure sea",
+      "Z_m": 10,
+      "model": "Monte Carlo",
+      "loss_db": -12.110166967500957
+    },
+    {
+      "water": "Pure sea",
+      "Z_m": 10,
+      "model": "Beer-Lambert",
+      "loss_db": -2.43204909865821
+    },
+    {
+      "water": "Pure sea",
+      "Z_m": 10,
+      "model": "BL+geometris",
+      "loss_db": -12.133059007943192
+    },
+    {
+      "water": "Pure sea",
+      "Z_m": 20,
+      "model": "Monte Carlo",
+      "loss_db": -20.545396267290617
+    },
+    {
+      "water": "Pure sea",
+      "Z_m": 20,
+      "model": "Beer-Lambert",
+      "loss_db": -4.86409819731642
+    },
+    {
+      "water": "Pure sea",
+      "Z_m": 20,
+      "model": "BL+geometris",
+      "loss_db": -20.585708019881025
+    },
+    {
+      "water": "Pure sea",
+      "Z_m": 30,
+      "model": "Monte Carlo",
+      "loss_db": -26.27946238916322
+    },
+    {
+      "water": "Pure sea",
+      "Z_m": 30,
+      "model": "Beer-Lambert",
+      "loss_db": -7.29614729597463
+    },
+    {
+      "water": "Pure sea",
+      "Z_m": 30,
+      "model": "BL+geometris",
+      "loss_db": -26.53958229965286
+    },
+    {
+      "water": "Pure sea",
+      "Z_m": 50,
+      "model": "Monte Carlo",
+      "loss_db": -35.39934838730559
+    },
+    {
+      "water": "Pure sea",
+      "Z_m": 50,
+      "model": "Beer-Lambert",
+      "loss_db": -12.160245493291052
+    },
+    {
+      "water": "Pure sea",
+      "Z_m": 50,
+      "model": "BL+geometris",
+      "loss_db": -35.84065548929641
+    },
+    {
+      "water": "Pure sea",
+      "Z_m": 70,
+      "model": "Monte Carlo",
+      "loss_db": -42.258842585818776
+    },
+    {
+      "water": "Pure sea",
+      "Z_m": 70,
+      "model": "Beer-Lambert",
+      "loss_db": -17.02434369060747
+    },
+    {
+      "water": "Pure sea",
+      "Z_m": 70,
+      "model": "BL+geometris",
+      "loss_db": -43.62731440017758
+    },
+    {
+      "water": "Pure sea",
+      "Z_m": 100,
+      "model": "Monte Carlo",
+      "loss_db": -49.768962575973596
+    },
+    {
+      "water": "Pure sea",
+      "Z_m": 100,
+      "model": "Beer-Lambert",
+      "loss_db": -24.320490986582104
+    },
+    {
+      "water": "Pure sea",
+      "Z_m": 100,
+      "model": "BL+geometris",
+      "loss_db": -54.02150089586708
+    },
+    {
+      "water": "Clear ocean",
+      "Z_m": 10,
+      "model": "Monte Carlo",
+      "loss_db": -15.07469362895155
+    },
+    {
+      "water": "Clear ocean",
+      "Z_m": 10,
+      "model": "Beer-Lambert",
+      "loss_db": -6.514417228548777
+    },
+    {
+      "water": "Clear ocean",
+      "Z_m": 10,
+      "model": "BL+geometris",
+      "loss_db": -16.21542713783376
+    },
+    {
+      "water": "Clear ocean",
+      "Z_m": 20,
+      "model": "Monte Carlo",
+      "loss_db": -26.30152791187544
+    },
+    {
+      "water": "Clear ocean",
+      "Z_m": 20,
+      "model": "Beer-Lambert",
+      "loss_db": -13.028834457097554
+    },
+    {
+      "water": "Clear ocean",
+      "Z_m": 20,
+      "model": "BL+geometris",
+      "loss_db": -28.75044427966216
+    },
+    {
+      "water": "Clear ocean",
+      "Z_m": 30,
+      "model": "Monte Carlo",
+      "loss_db": -35.1836770155651
+    },
+    {
+      "water": "Clear ocean",
+      "Z_m": 30,
+      "model": "Beer-Lambert",
+      "loss_db": -19.54325168564633
+    },
+    {
+      "water": "Clear ocean",
+      "Z_m": 30,
+      "model": "BL+geometris",
+      "loss_db": -38.786686689324554
+    },
+    {
+      "water": "Clear ocean",
+      "Z_m": 50,
+      "model": "Monte Carlo",
+      "loss_db": -50.55478689763569
+    },
+    {
+      "water": "Clear ocean",
+      "Z_m": 50,
+      "model": "Beer-Lambert",
+      "loss_db": -32.572086142743885
+    },
+    {
+      "water": "Clear ocean",
+      "Z_m": 50,
+      "model": "BL+geometris",
+      "loss_db": -56.252496138749244
+    },
+    {
+      "water": "Clear ocean",
+      "Z_m": 70,
+      "model": "Monte Carlo",
+      "loss_db": -79.52903338263448
+    },
+    {
+      "water": "Clear ocean",
+      "Z_m": 70,
+      "model": "Beer-Lambert",
+      "loss_db": -45.60092059984144
+    },
+    {
+      "water": "Clear ocean",
+      "Z_m": 70,
+      "model": "BL+geometris",
+      "loss_db": -72.20389130941155
+    },
+    {
+      "water": "Clear ocean",
+      "Z_m": 100,
+      "model": "Beer-Lambert",
+      "loss_db": -65.14417228548777
+    },
+    {
+      "water": "Clear ocean",
+      "Z_m": 100,
+      "model": "BL+geometris",
+      "loss_db": -94.84518219477275
+    }
+  ]
+}

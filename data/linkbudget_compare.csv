@@ -1,0 +1,36 @@
+water,Z_m,model,loss_db
+Pure sea,10,Monte Carlo,-12.110
+Pure sea,10,Beer-Lambert,-2.432
+Pure sea,10,BL+geometris,-12.133
+Pure sea,20,Monte Carlo,-20.545
+Pure sea,20,Beer-Lambert,-4.864
+Pure sea,20,BL+geometris,-20.586
+Pure sea,30,Monte Carlo,-26.279
+Pure sea,30,Beer-Lambert,-7.296
+Pure sea,30,BL+geometris,-26.540
+Pure sea,50,Monte Carlo,-35.399
+Pure sea,50,Beer-Lambert,-12.160
+Pure sea,50,BL+geometris,-35.841
+Pure sea,70,Monte Carlo,-42.259
+Pure sea,70,Beer-Lambert,-17.024
+Pure sea,70,BL+geometris,-43.627
+Pure sea,100,Monte Carlo,-49.769
+Pure sea,100,Beer-Lambert,-24.320
+Pure sea,100,BL+geometris,-54.022
+Clear ocean,10,Monte Carlo,-15.075
+Clear ocean,10,Beer-Lambert,-6.514
+Clear ocean,10,BL+geometris,-16.215
+Clear ocean,20,Monte Carlo,-26.302
+Clear ocean,20,Beer-Lambert,-13.029
+Clear ocean,20,BL+geometris,-28.750
+Clear ocean,30,Monte Carlo,-35.184
+Clear ocean,30,Beer-Lambert,-19.543
+Clear ocean,30,BL+geometris,-38.787
+Clear ocean,50,Monte Carlo,-50.555
+Clear ocean,50,Beer-Lambert,-32.572
+Clear ocean,50,BL+geometris,-56.252
+Clear ocean,70,Monte Carlo,-79.529
+Clear ocean,70,Beer-Lambert,-45.601
+Clear ocean,70,BL+geometris,-72.204
+Clear ocean,100,Beer-Lambert,-65.144
+Clear ocean,100,BL+geometris,-94.845
