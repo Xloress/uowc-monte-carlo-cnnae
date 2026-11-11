@@ -1,116 +1,132 @@
-# README — Paket Paper & Presentasi UOWC Kelompok 2
+# Optimization of Underwater Optical Wireless Communication (UOWC) via CNN-Autoencoder and Acoustic-Optical Hybrid Architecture
 
-Semua hasil di sini **dihasilkan dari simulasi sendiri**, bukan mengutip grafik
-dari jurnal. Setiap angka di paper bisa dilacak ke script yang menghasilkannya.
+Repositori ini memuat implementasi komputasi, pemodelan kanal, arsitektur *deep learning*, serta dataset riset mengenai optimalisasi sistem **Underwater Optical Wireless Communication (UOWC)**. Riset ini mengintegrasikan simulasi propagasi foton berbasis **Monte Carlo**, penekanan *Bit Error Rate* (BER) menggunakan **CNN-Autoencoder (PyTorch)**, dan perancangan mekanisme keandalan jaringan hibrida **Optik-Akustik OSPFv2**.
 
-## Isi paket
+Proyek riset ini disusun oleh **Azlan Abdurahman (241344006)** dan **Muhammad Alvian Syahputra (241344018)** di bawah bimbingan:
+* **Mohammad Farid Susanto, ST., M.Eng**
+* **Ahmad Ikhyari, M.T.**  
+*Program Studi D4 Teknik Telekomunikasi, Jurusan Teknik Elektro, Politeknik Negeri Bandung (POLBAN)*.
 
-| File | Isi |
-|---|---|
-| `PAPER_UOWC_revisi.docx` | Paper revisi: 5 bab, 2 tabel, 14 gambar |
-| `PRESENTASI_UOWC.pptx` | Deck 12 slide (16:9), siap presentasi |
-| `TUTORIAL_OPTISYSTEM.md` | Langkah demi langkah praktikum link budget di OptiSystem |
-| `TUTORIAL_PACKET_TRACER.md` | Langkah demi langkah failover OSPF di Packet Tracer |
-| `paper_original.docx` | Draft awal (arsip, jangan dihapus) |
-| `figs/` | 15 gambar hasil simulasi (PNG 160 dpi) |
-| `data/` | Semua data mentah (CSV/JSON) |
-| `src/` | Script Python yang menghasilkan semuanya |
-| `models/` | Bobot model CNN-AE terlatih |
-| `requirements.txt` | Daftar paket Python yang dibutuhkan |
-| `jalankan_semuanya.sh` | Satu perintah membangun ulang semuanya |
+---
 
-## Cara menjalankan dari nol
+## 📌 Abstrak & Latar Belakang
+
+Komunikasi nirkabel bawah laut berbasis akustik konvensional memiliki keterbatasan fisik mendasar berupa latensi perambatan yang tinggi ($\approx 1500\text{ m/s}$) dan lebar pita yang sangat sempit (orde kilohertz). UOWC menggunakan spektrum cahaya biru-hijau ($\lambda = 532\text{ nm}$) menawarkan solusi transmisi data berkecepatan tinggi hingga orde Gigabits per detik (Gbps). 
+
+Penelitian ini memfokuskan pada tiga pilar penyelesaian tantangan kanal optik bawah air:
+1. **Karakterisasi Kanal & Hamburan Multi-jalur:** Menggunakan simulasi Monte Carlo untuk memetakan divergensi geometris, *impulse response*, dan *RMS delay spread*.
+2. **Mitigasi Turbulensi & Sintilasi Laut:** Menerapkan arsitektur *end-to-end* CNN-Autoencoder yang dilatih langsung terhadap pemodelan kanal turbulensi *Exponential-Generalized Gamma* (EGG).
+3. **Keandalan Tautan Berkelanjutan:** Merancang sistem hibrida terpadu dengan failover otomatis menggunakan rute akustik cadangan berbasis protokol routing dinamis OSPFv2.
+
+---
+
+## 🔬 Metodologi dan Hasil Kunci
+
+### 1. Karakterisasi Kanal Monte Carlo
+* Melacak transmisi $3 \times 10^5$ paket foton per titik pengujian pada empat tipe perairan (*pure sea, clear ocean, coastal, harbor*).
+* Memvalidasi bahwa rumus analitis *Beer-Lambert* mengabaikan efek geometris berkas cahaya (deviasi hingga $13,5\text{ dB}$ pada jarak $20\text{ m}$).
+* Hasil redaman simulasi terverifikasi presisi terhadap literatur acuan internasional (*Gabriel et al., 2011*): $-26,5\text{ dB}$ berbanding $-28,0\text{ dB}$ pada perairan *clear ocean $20\text{ m}$*.
+
+### 2. Evaluasi Model Deep Learning CNN-Autoencoder
+* Model neural network *end-to-end* dirancang dengan lapisan aktivasi *sigmoid* guna memastikan sinyal intensitas optik bersifat unipolar non-negatif.
+* Pada kondisi turbulensi sedang ($\sigma_I^2 = 0,75$ pada $E_b/N_0 = 10\text{ dB}$), model CNN-Autoencoder berhasil menurunkan nilai BER dari **$0,066$ menjadi $0,029$**.
+* Analisis batasan model menunjukkan adanya *error floor* pada kondisi turbulensi kuat ($\sigma_I^2 = 2,03$), yang mengonfirmasi batas teoritis kompensasi *fading* ekstrem tanpa diversitas ruang tambahan.
+
+### 3. Jaringan Hibrida Optik-Akustik & Analisis Failover
+* Integrasi jalur utama UOWC dengan jalur cadangan akustik menggunakan protokol routing dinamis OSPFv2 (metrik biaya rute 1 berbanding 100).
+* Pengujian menunjukkan *convergence time* peralihan rute otomatis sebesar $\approx 40\text{ detik}$ saat tautan optik mengalami *los of sight* atau interupsi fisik, menjamin kelangsungan transmisi data telemetri dasar laut.
+
+---
+
+## 📂 Struktur Repositori
+
+```text
+├── docs/
+│   └── Paper_UOWC_CNN_AE_Azlan_Alvian.docx    # Naskah lengkap paper ilmiah
+├── src/                                       # Seluruh kode sumber simulasi & model
+│   ├── monte_carlo_uowc.py                    # Engine simulasi propagasi foton
+│   ├── cnn_ae_uowc.py                         # Arsitektur & pelatihan model PyTorch CNN-AE
+│   ├── hybrid_network.py                      # Pemodelan failover jaringan hibrida
+│   ├── run_channel_sims.py                    # Pipeline simulasi rugi kanal
+│   ├── run_dispersion.py                      # Pipeline perhitungan RMS delay spread
+│   └── run_cnn_ae.py                          # Pipeline evaluasi kurva BER vs SNR
+├── models/                                    # Bobot model terlatih PyTorch (.pt)
+│   ├── ae_lemah.pt                            # Model terlatih turbulensi lemah
+│   ├── ae_sedang.pt                           # Model terlatih turbulensi sedang
+│   └── ae_kuat.pt                             # Model terlatih turbulensi kuat
+├── data/                                      # Data numerik mentah (.csv & .json)
+├── figs/                                      # 16 visualisasi grafik resolusi tinggi (PNG)
+├── TUTORIAL_OPTISYSTEM.md                     # Panduan simulasi OptiSystem
+├── TUTORIAL_PACKET_TRACER.md                  # Panduan simulasi jaringan OSPF
+├── requirements.txt                           # Daftar dependensi Python
+└── jalankan_semuanya.sh                       # Skrip otomasi reproduksi hasil riset
+```
+
+---
+
+## 🛠️ Panduan Instalasi dan Menjalankan Kode
+
+### 1. Persiapan Lingkungan (Environment Setup)
+Pastikan Python 3.10+ telah terpasang pada sistem operasi:
 
 ```bash
-cd <folder hasil ekstrak>
+# Clone repositori
+git clone https://github.com/Xloress/uowc-monte-carlo-cnnae.git
+cd uowc-monte-carlo-cnnae
+
+# Buat virtual environment
 python3 -m venv .venv
 source .venv/bin/activate
+
+# Pasang dependensi
 pip install torch --index-url https://download.pytorch.org/whl/cpu
 pip install -r requirements.txt
-bash jalankan_semuanya.sh
 ```
 
-## Cara menjalankan per bagian (tanpa install ulang)
+### 2. Menjalankan Simulasi Per Bagian
+Eksekusi modul dapat dilakukan secara independen sesuai fokus analisis:
 
 ```bash
-source .venv/bin/activate          # atau pakai .venv/bin/python langsung
-
-python src/monte_carlo_uowc.py     # validasi ke Gabriel 2011   (<1 detik)
-python src/run_channel_sims.py     # fig1, fig5 + data redaman  (~110 detik)
-python src/run_dispersion.py       # fig2, fig3, fig4            (~5 detik)
-python src/hybrid_network.py       # model failover + data       (<1 detik)
-python src/run_network_figs.py     # fig8, fig9                  (<1 detik)
-python src/run_extra_figs.py       # fig10-13                    (~5 detik)
-python src/run_cnn_ae.py figs      # fig6, fig7, fig8 (cepat, dari data + models/)
-python src/build_paper.py          # bangun PAPER_UOWC_revisi.docx
-python src/build_ppt.py            # bangun PRESENTASI_UOWC.pptx
-```
-
-**Urutan penting:** `run_channel_sims.py` harus jalan lebih dulu karena
-`hybrid_network.py` membaca `data/attenuation_vs_distance.csv`.
-
-**Waktu total:** 45-60 menit di CPU 2 core. Paling lama CNN-AE training
-(`run_cnn_ae.py all`, ~20 menit). Bobot model yang sudah terlatih ada di
-`models/`, jadi pakai mode `figs` kalau tidak mau menunggu training.
-
-## Pemetaan gambar ke bagian paper
-
-| Gambar | Isi | Bab |
-|---|---|---|
-| fig1_redaman_vs_jarak | Rugi kanal vs jarak, 4 tipe air | 4.1 |
-| fig5_linkbudget_3model | Beer-Lambert vs geometris vs Monte Carlo | 4.1 |
-| fig2_impulse_response | IR pada Z = 20 m | 4.2 |
-| fig3_aperture | IR vs diameter aperture | 4.2 |
-| fig4_dispersi | RMS delay spread vs jarak | 4.2 |
-| fig4_tau_vs_jarak | Tau vs jarak | 4.2 |
-| fig6_ber_vs_snr | BER vs Eb/N0, 4 kondisi | 4.3 |
-| fig7_ber_vs_turbulensi | BER vs indeks sintilasi | 4.3 |
-| fig8_channel_aware_gain | Manfaat pengetahuan kanal | 4.3 |
-| fig8_failover_timeline | Timeline failover | 4.4 |
-| fig9_throughput_latensi | Throughput & latensi vs jarak | 4.4 |
-| fig10_skema_sistem | Skema sistem UOWC | 2 |
-| fig11_sintilasi_egg | Distribusi sintilasi EGG | 4.3 |
-| fig12_foton_diterima | Jumlah foton diterima vs jarak | 4.1 |
-| fig13_deviasi_model | Deviasi MC vs model analitis | 4.1 |
-
-## Validasi model (penting untuk sidang)
-
-Simulator Monte Carlo divalidasi terhadap Tabel II Gabriel dkk. (2011),
-kondisi lambda = 532 nm, Z = 20 m, D = 20 cm. Jalankan:
-
-```bash
+# 1. Validasi simulator Monte Carlo terhadap literatur Gabriel (2011)
 python src/monte_carlo_uowc.py
+
+# 2. Simulasi rugi kanal dan perbandingan link budget (Fig. 1 & Fig. 5)
+python src/run_channel_sims.py
+
+# 3. Simulasi respon impuls dan dispersi multipath (Fig. 2, 3, & 4)
+python src/run_dispersion.py
+
+# 4. Evaluasi kurva BER model CNN-Autoencoder menggunakan checkpoint terlatih
+python src/run_cnn_ae.py figs
+
+# 5. Simulasi dinamika failover jaringan hibrida optik-akustik
+python src/hybrid_network.py
 ```
 
-Keluar dalam <1 detik. Kalau penguji meminta bukti simulatornya bukan
-karangan, ini yang ditunjukkan.
+Seluruh grafik keluaran akan tersimpan otomatis di direktori `figs/`.
 
-## Reproduksibilitas
+---
 
-Semua seed dikunci di dalam script (`seed=0`, `7`, `11`, `23`, `123`).
-Menjalankan ulang dengan versi library yang sama menghasilkan file PNG
-**bit-identik** (terverifikasi SHA-256). DOCX/PPTX juga identik isinya;
-byte-nya berbeda hanya karena timestamp zip.
+## 📊 Pemetaan Gambar Hasil Riset
 
-## Catatan data (jangan sampai salah kutip)
+| Gambar | Keterangan Parameter Teknis | Bab Terkait |
+|:---|:---|:---:|
+| `fig1_redaman_vs_jarak.png` | Karakteristik rugi kanal terhadap jarak pada 4 tipe perairan | Bab IV.A |
+| `fig5_linkbudget_3model.png` | Perbandingan model analitis Beer-Lambert vs Monte Carlo | Bab IV.A |
+| `fig2_impulse_response.png` | Respon impuls kanal optik pada jarak transmisi $20\text{ m}$ | Bab IV.B |
+| `fig3_aperture.png` | Pengaruh diameter aperture penerima terhadap penerimaan foton | Bab IV.B |
+| `fig4_dispersi.png` | Karakteristik pelebaran waktu sinyal (*RMS delay spread*) | Bab IV.B |
+| `fig6_ber_vs_snr.png` | Kurva kinerja BER vs $E_b/N_0$ pada berbagai kondisi turbulensi | Bab IV.C |
+| `fig7_ber_vs_turbulensi.png`| Evaluasi performa model CNN-AE terhadap variasi indeks sintilasi | Bab IV.C |
+| `fig8_failover_timeline.png`| Dinamika waktu transisi (*convergence*) failover rute OSPF | Bab IV.D |
+| `fig9_throughput_latensi.png`| Karakteristik throughput dan latensi sistem hibrida terpadu | Bab IV.D |
 
-- `-300 dB` adalah penanda "nol foton terdeteksi", BUKAN nilai rugi nyata.
-  Titik seperti itu tidak diplot di fig1/fig5.
-- Titik dengan <10 foton terdeteksi adalah noise Monte Carlo (ketidakpastian
-  1/sqrt(N) = 33-100%), tidak boleh dipakai sebagai angka.
-- Harbor dengan c = 2,17 m⁻¹ butuh ~10⁹ foton untuk estimasi stabil di 10 m;
-  dengan 3×10⁵ foton hasilnya hanya kualitatif.
-- Angka yang aman dikutip: Coastal -47,0 dB @ 30 m dan Clear ocean
-  -26,5 dB @ 20 m (keduanya >200 foton terdeteksi).
+---
 
-## Catatan kejujuran ilmiah
+## 📈 Validasi & Keterbatasan Ilmiah
 
-Dua hal yang sengaja ditampilkan apa adanya dan **jangan dihapus**:
-
-- **Error floor CNN-AE** pada turbulensi kuat. Model tidak bisa
-  menyelamatkan simbol yang fading-nya ekstrem. Klaim "AI menyelesaikan
-  semuanya" akan langsung dipatahkan grafik sendiri.
-- **Blackout 40 detik** pada failover OSPF. Ini kelemahan nyata arsitektur
-  reaktif, dan justru menjadi dasar usulan riset lanjutan.
-
-Menampilkan keduanya membuat paper lebih kuat, bukan lebih lemah.
+* **Keterlacakan Hasil (Reproducibility):** Seluruh proses stokastik Monte Carlo dan inisialisasi jaringan syaraf tiruan dikunci menggunakan *fixed random seed* (`seed=0, 7, 11, 23, 123`) untuk memastikan hasil numerik dapat direproduksi secara bit-identik.
+* **Batas Deteksi Foton:** Nilai atenuasi $\le -300\text{ dB}$ pada simulasi merepresentasikan ketiadaan foton yang mencapai aperture penerima, bukan nilai daya kontinu nyata.
+* **Evaluasi Transparansi Model:**
+  * *Error Floor* pada turbulensi kuat ($\sigma_I^2 = 2,03$) merupakan karakteristik alami keterbatasan modulasi intensitas optik tunggal pada fluktuasi acak ekstrem.
+  * Durasi *dead-time* $40\text{ detik}$ pada failover rute OSPF adalah konsekuensi dari timer standar *Dead Interval* OSPFv2, yang mengindikasikan perlunya protokol deteksi jalur cepat (*Bidirectional Forwarding Detection* / BFD) untuk implementasi taktis lanjutan.
