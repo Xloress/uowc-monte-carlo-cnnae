@@ -1,5 +1,10 @@
 # Optimization of Underwater Optical Wireless Communication (UOWC) via CNN-Autoencoder and Acoustic-Optical Hybrid Architecture
 
+[![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-Deep%20Learning-EE4C2C?logo=pytorch&logoColor=white)](https://pytorch.org/)
+[![OptiSystem](https://img.shields.io/badge/OptiSystem-Optical%20Simulation-brightgreen)]()
+[![Monte Carlo](https://img.shields.io/badge/Simulation-Monte%20Carlo%20Photons-blue)]()
+
 Repositori ini memuat implementasi komputasi, pemodelan kanal, arsitektur *deep learning*, serta dataset riset mengenai optimalisasi sistem **Underwater Optical Wireless Communication (UOWC)**. Riset ini mengintegrasikan simulasi propagasi foton berbasis **Monte Carlo**, penekanan *Bit Error Rate* (BER) menggunakan **CNN-Autoencoder (PyTorch)**, dan perancangan mekanisme keandalan jaringan hibrida **Optik-Akustik OSPFv2**.
 
 Proyek riset ini disusun oleh **Azlan Abdurahman (241344006)** dan **Muhammad Alvian Syahputra (241344018)** di bawah bimbingan:
