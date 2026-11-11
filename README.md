@@ -42,7 +42,10 @@ Penelitian ini memfokuskan pada tiga pilar penyelesaian tantangan kanal optik ba
 
 ```text
 ├── docs/
-│   └── Paper_UOWC_CNN_AE_Azlan_Alvian.docx    # Naskah lengkap paper ilmiah
+│   └── Paper_UOWC_CNN_AE_Azlan_Alvian.pdf    # Naskah lengkap paper ilmiah (PDF format)
+├── optisystem/                                # File simulasi OptiSystem
+│   ├── uowc_linkbudget.osd                    # Desain rangkaian OptiSystem (.osd)
+│   └── optisystem_layout.png                  # Diagram skema layout optik OptiSystem
 ├── src/                                       # Seluruh kode sumber simulasi & model
 │   ├── monte_carlo_uowc.py                    # Engine simulasi propagasi foton
 │   ├── cnn_ae_uowc.py                         # Arsitektur & pelatihan model PyTorch CNN-AE
